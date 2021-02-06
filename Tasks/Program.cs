@@ -24,7 +24,7 @@ namespace Tasks
             foreach (Process killed in anti)
 
             {
-                Console.WriteLine(killed);
+                Console.WriteLine("Вы хотите остановить процесс "+ killed.ProcessName);
                 try
                 {
                     killed.Kill();
@@ -41,7 +41,7 @@ namespace Tasks
             Console.Write("Укажите Id для завершения процесса: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Process ant = Process.GetProcessById(n);
-            Console.WriteLine(ant);
+            Console.WriteLine("Вы хотите остановить процесс " + ant.ProcessName);
             try
             {
                 ant.Kill();
